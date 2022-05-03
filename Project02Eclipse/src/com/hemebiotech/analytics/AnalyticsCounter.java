@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class AnalyticsCounter {
 
 	private static String fileIn = "symptoms.txt";
+	private static String fileOut = "result.out";
 
 	public static void main(String args[]) throws IOException {
 
@@ -20,7 +21,9 @@ public class AnalyticsCounter {
 		CountAndSortSymptoms sortedListOfSymptoms = new CountAndSortSymptoms(listOfSymptoms);
 		System.out.println(sortedListOfSymptoms.count());
 		
-		
+		/* 3- Creation of the result file*/
+		WriteTheCountedSymptomsInAFile result = new WriteTheCountedSymptomsInAFile();
+		result.createFile(sortedListOfSymptoms.count(), fileOut);
 
 	}
 }
