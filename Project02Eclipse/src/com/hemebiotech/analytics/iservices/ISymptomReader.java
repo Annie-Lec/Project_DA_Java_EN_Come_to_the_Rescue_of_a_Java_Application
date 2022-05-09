@@ -1,5 +1,8 @@
-package com.hemebiotech.analytics;
+package com.hemebiotech.analytics.iservices;
 
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -13,8 +16,9 @@ import java.util.List;
 public interface ISymptomReader {
 	/**
 	 * If no data is available, return an empty List
-	 * 
-	 * @return a raw listing of all Symptoms obtained from a data source, duplicates are possible/probable
+	 * 	 * @return a raw listing of all Symptoms obtained from a data source
+	 * IOException
+	 * @throws IOException 
 	 */
-	List<String> GetSymptoms ();
+	List<String> getSymptoms () throws IOException;
 }
