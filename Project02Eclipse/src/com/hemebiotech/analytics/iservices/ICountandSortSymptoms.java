@@ -14,10 +14,11 @@ import java.util.TreeMap;
  */
 public interface ICountandSortSymptoms {
 	/**
-	 * @param String Item as Key, Number of Item
-	 * @return a TreeMap 
-	 * @throws IOException
+	 * Groups and counts by Item (Key) each record of a non ordered List in a TreeMap
+	 * @return a TreeMap String Item as Key, Number of Item
+	 * @throws IOException : if we have issues with data sources 
 	 */
+	
 	public TreeMap<String, Integer> count() throws IOException;
 
 }

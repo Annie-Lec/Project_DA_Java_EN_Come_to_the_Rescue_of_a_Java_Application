@@ -10,7 +10,12 @@ import java.util.TreeMap;
  */
 
 public interface IWriteSortedTreeInAFile {
-	
+	/**
+	 * 
+	 * @param tree : treeMap containing the data to be saved in an external file 
+	 * @param outputFile : external file that will contain the treeMap data
+	 * @throws IOException : if we have problem with the resources 
+	 */
 	public void createFile(TreeMap<String, Integer> tree, String outputFile) throws IOException;
 
 }

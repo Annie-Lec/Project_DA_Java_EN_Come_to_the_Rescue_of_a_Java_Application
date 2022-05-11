@@ -2,6 +2,7 @@ package com.hemebiotech.analytics;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import com.hemebiotech.analytics.iservices.ICountandSortSymptoms;
 import com.hemebiotech.analytics.iservices.ISymptomReader;
@@ -11,11 +12,11 @@ import com.hemebiotech.analytics.services.ReadSymptomDataFromFile;
 import com.hemebiotech.analytics.services.WriteTheCountedSymptomsInAFile;
 
 /**
- * 
+ * generate the expected file of the number of symptoms sorted in alphabetical order.
  * Read a file and create a non-ordered List within. Then count the record in a
- * treeMap : ordered list And finally write the result in a file
+ * treeMap : ordered list and finally write the result in a file
  * 
- * @see CountandSortSymptoms
+ * @see CountAndSortSymptoms
  * @see ReadSymptomDataFromFile
  * @see WriteTheCountedSymptomsInAFile
  * 
@@ -28,9 +29,14 @@ public class AnalyticsCounter {
 	private static String fileIn = "symptoms.txt";
 	private static String fileOut = "result.out";
 
+	/**
+	 * main method of the class AnalyticsCounter calling the 3 methods : read / count and sort / write
+	 * allowing to generate the expected file of the number of symptoms sorted in alphabetical order 
+	 * @param args The command line arguments
+	 */
 	public static void main(String args[]) {
 
-		ArrayList<String> listOfSymptoms = new ArrayList<String>();
+		List<String> listOfSymptoms = new ArrayList<String>();
 
 		/* 1- Read the file and create a non-ordered List within */
 		ISymptomReader readFile = new ReadSymptomDataFromFile(fileIn);
