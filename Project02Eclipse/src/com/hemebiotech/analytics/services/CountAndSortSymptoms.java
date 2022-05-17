@@ -1,6 +1,5 @@
 package com.hemebiotech.analytics.services;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeMap;
@@ -45,7 +44,7 @@ public class CountAndSortSymptoms implements ICountandSortSymptoms {
 	}
 
 	@Override
-	public TreeMap<String, Integer> count() throws IOException {
+	public TreeMap<String, Integer> count() {
 		TreeMap<String, Integer> treeMapSymptoms = new TreeMap<>();
 		// group by and count
 		for (String record : liste) {

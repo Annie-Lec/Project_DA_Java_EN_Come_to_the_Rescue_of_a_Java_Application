@@ -1,7 +1,6 @@
 package com.hemebiotech.analytics.services;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,6 +15,20 @@ import com.hemebiotech.analytics.iservices.ISymptomReader;
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	private String filepath;
+
+	/**
+	 * @return the filepath
+	 */
+	public String getFilepath() {
+		return filepath;
+	}
+
+	/**
+	 * @param filepath the filepath to set
+	 */
+	public void setFilepath(String filepath) {
+		this.filepath = filepath;
+	}
 
 	/**
 	 * 
