@@ -40,11 +40,11 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 	}
 
 	@Override
-	public List<String> getSymptoms() throws IOException{
+	public List<String> getSymptoms() throws IOException {
 		ArrayList<String> result = new ArrayList<String>();
 
+		try (FileReader fileReader = new FileReader(filepath)) {
 
-			FileReader fileReader = new FileReader(filepath);
 			BufferedReader reader = new BufferedReader(fileReader);
 			String line = reader.readLine();
 
@@ -52,9 +52,9 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 				result.add(line);
 				line = reader.readLine();
 			}
-			reader.close();
 
-		return result;
+			return result;
+		}
 	}
 
 }

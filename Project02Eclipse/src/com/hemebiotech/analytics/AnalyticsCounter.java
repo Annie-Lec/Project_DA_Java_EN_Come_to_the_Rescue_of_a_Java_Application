@@ -28,34 +28,6 @@ import com.hemebiotech.analytics.services.WriteTheCountedSymptomsInAFile;
 public class AnalyticsCounter {
 
 	private static String fileIn = "symptoms.txt";
-	/**
-	 * @return the fileIn
-	 */
-	public static String getFileIn() {
-		return fileIn;
-	}
-
-	/**
-	 * @param fileIn the fileIn to set
-	 */
-	public static void setFileIn(String fileIn) {
-		AnalyticsCounter.fileIn = fileIn;
-	}
-
-	/**
-	 * @return the fileOut
-	 */
-	public static String getFileOut() {
-		return fileOut;
-	}
-
-	/**
-	 * @param fileOut the fileOut to set
-	 */
-	public static void setFileOut(String fileOut) {
-		AnalyticsCounter.fileOut = fileOut;
-	}
-
 	private static String fileOut = "result.out";
 
 	/**
